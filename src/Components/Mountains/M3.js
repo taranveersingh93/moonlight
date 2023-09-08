@@ -21,7 +21,7 @@ const M3 = ({scrollValue}) => {
   }, [scrollValue])
 
   useEffect(() => {
-    console.log("top", m3Top, "size", sizeMultiplier, "scroll", scrollValue)
+    // console.log("top", m3Top, "size", sizeMultiplier, "scroll", scrollValue)
   }, [m3Top, sizeMultiplier, scrollValue])
 
   return (
