@@ -18,9 +18,6 @@ const M4 = ({scrollValue}) => {
     setSizeMultiplier(1 + (0.0003 * adjustedScroll))
   }, [scrollValue])
 
-  useEffect(() => {
-    // console.log("top", m4Top, "size", sizeMultiplier, "scroll", scrollValue)
-  }, [m4Top, sizeMultiplier, scrollValue])
   return (
     <img className='mountain4' src={mountain4} style={{top: `${m4Top}vh`, left: `${m4Left}vw`, transform: `scale(${sizeMultiplier})`}}/>
   )

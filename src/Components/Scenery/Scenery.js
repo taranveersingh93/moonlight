@@ -30,7 +30,6 @@ const Scenery = ({scrollValue, data, formSubmitted}) => {
   const [assurance3Visible, setAssurance3Visible] = useState(false)
 
   useEffect(() => {
-    console.log(scrollValue, formSubmitted)
     if (scrollValue > 150 && scrollValue < 420) {
       setWin1Visible(true)
     } else {

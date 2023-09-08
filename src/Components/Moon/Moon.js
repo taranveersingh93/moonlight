@@ -10,7 +10,6 @@ const Moon = ({scrollValue}) => {
 
   useEffect(() => {
     setMoonTop(40 - 0.001*scrollValue)
-    // console.log(scrollValue)
   }, [scrollValue])
   return (
     <div className='moon-container' style={{top: `${moonTop}vh`, left: `${moonLeft}vw`, transform: `scale(${sizeMultiplier})`}}>

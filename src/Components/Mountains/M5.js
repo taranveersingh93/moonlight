@@ -17,9 +17,6 @@ const M5 = ({scrollValue}) => {
     setSizeMultiplier(1 + (0.0000015 * scrollValue))
   }, [scrollValue])
 
-  useEffect(() => {
-    console.log("top", m5Top, "size", sizeMultiplier, "scroll", scrollValue)
-  }, [m5Top, sizeMultiplier, scrollValue])
   return (
     <img className='mountain5' src={mountain5} style={{top: `${m5Top}vh`, right: `${m5Right}vw`, transform: `scale(${sizeMultiplier})`}}/>
   )
