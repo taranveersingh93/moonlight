@@ -7,8 +7,29 @@ import mountain2 from '../../Images/m2.png'
 import mountain3 from '../../Images/m3.png'
 import mountain4 from '../../Images/m4.png'
 import mountain5 from '../../Images/m5.png'
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [scrollValue, setScrollValue] = useState(0)
+  
+  const moon = document.querySelector(".moon-container")
+  const m1 = document.querySelector(".mountain1")
+  const m2 = document.querySelector(".mountain2")
+  const m3 = document.querySelector(".mountain3")
+  const m4 = document.querySelector(".mountain4")
+  const m5 = document.querySelector(".mountain5")
+  const leftTrees = document.querySelector(".left-trees")
+  const rightTrees = document.querySelector(".right-trees")
+  
+  window.addEventListener('wheel', (e) => {
+    const changeY = e.deltaY;
+    setScrollValue(scrollValue + changeY)
+  })
+  
+  useEffect(() => {
+    console.log(scrollValue, "scrollValue")
+  }, [scrollValue])
+
   return (
     <div className="App">
         <div className='moon-container'>
