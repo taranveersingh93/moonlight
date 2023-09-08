@@ -1,0 +1,38 @@
+.App img {
+  position: absolute;
+}
+
+.mountain1 {
+  top: 55vh;
+  width: 110vw;
+  left: -5vw;
+  z-index: 6;
+}
+
+.mountain2 {
+  top: 25vh;
+  left: -10vw;
+  width: 107vw;
+  z-index: 5;
+}
+
+.mountain3 {
+  top: 20vh;
+  left: -5vw;
+  width: 107vw;
+  z-index: 4;
+}
+
+.mountain4 {
+  top: 5vh;
+  left: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
+.mountain5 {
+  top: 10vh;
+  right: 0;
+  width: 60vw;
+  z-index: 2;
+}
