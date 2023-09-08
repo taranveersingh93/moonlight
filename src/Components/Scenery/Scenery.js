@@ -9,7 +9,6 @@ import LeftTree from '../Trees/LeftTree'
 import RightTree from '../Trees/RightTree'
 
 const Scenery = ({scrollValue}) => {
-
   return (
     <>
       <Moon scrollValue={scrollValue}/>

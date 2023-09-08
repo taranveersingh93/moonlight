@@ -10,7 +10,7 @@ function App() {
   window.addEventListener('wheel', (e) => {
     const changeY = e.deltaY;
     if (scrollValue + changeY >= 0) {
-      setScrollValue(scrollValue + changeY)
+      setScrollValue(Number((scrollValue + changeY).toFixed(0)))
     } else {
       setScrollValue(0)
     }
