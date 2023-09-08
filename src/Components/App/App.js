@@ -3,12 +3,14 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Scenery from '../Scenery/Scenery';
 import Form from '../Form/Form';
+import ScrollIndicator from '../ScrollIndicator/ScrollIndicator';
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
   const [data, setData] = useState({})
-  const [formSubmitted, setFormSubmitted] = useState(false)
-  
+  const [formSubmitted, setFormSubmitted] = useState(false)  
+  const [scrollerVisible, setScrollerVisible] = useState(false)
+
   window.addEventListener('wheel', (e) => {
     const changeY = e.deltaY;
     if (scrollValue + changeY >= 0 && scrollValue + changeY < 9000 && formSubmitted) {
@@ -19,6 +21,14 @@ function App() {
       setScrollValue(0)
     }
   })
+
+  useEffect(() => {
+    if (scrollValue < 8999 && formSubmitted) {
+      setScrollerVisible(true)
+    } else {
+      setScrollerVisible(false)
+    }
+  }, [scrollValue, formSubmitted])
   
   useEffect(() => {
     if (data?.obstacle) {
@@ -31,7 +41,8 @@ function App() {
   return (
     <div className="App">
         {!formSubmitted && <Form setData={setData} />}
-        <Scenery scrollValue={scrollValue} data={data}/>
+        <Scenery scrollValue={scrollValue} data={data} formSubmitted={formSubmitted}/>
+        {scrollerVisible && <ScrollIndicator />}
     </div>
   );
 }

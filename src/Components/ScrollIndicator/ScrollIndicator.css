@@ -1,0 +1,7 @@
+.scroll-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  color: rgb(203, 158, 158);
+}

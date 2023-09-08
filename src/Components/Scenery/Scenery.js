@@ -16,9 +16,10 @@ import { useEffect, useState } from 'react'
 import Assurance1 from '../Texts/Assurance1'
 import Assurance2 from '../Texts/Assurance2'
 import Assurance3 from '../Texts/Assurance3'
+import ScrollIndicator from '../ScrollIndicator/ScrollIndicator'
 
 
-const Scenery = ({scrollValue, data}) => {
+const Scenery = ({scrollValue, data, formSubmitted}) => {
   const [win1Visible, setWin1Visible] = useState(false);
   const [win2Visible, setWin2Visible] = useState(false);
   const [win3Visible, setWin3Visible] = useState(false);
@@ -29,6 +30,7 @@ const Scenery = ({scrollValue, data}) => {
   const [assurance3Visible, setAssurance3Visible] = useState(false)
 
   useEffect(() => {
+    console.log(scrollValue, formSubmitted)
     if (scrollValue > 150 && scrollValue < 420) {
       setWin1Visible(true)
     } else {
@@ -77,7 +79,6 @@ const Scenery = ({scrollValue, data}) => {
       setAssurance3Visible(false)
     }
 
-    
 
   }, [scrollValue])
   return (
@@ -96,7 +97,6 @@ const Scenery = ({scrollValue, data}) => {
       {assurance1Visible && <Assurance1 scrollValue={scrollValue}/>}
       {assurance2Visible && <Assurance2 scrollValue={scrollValue}/>}
       {assurance3Visible && <Assurance3 scrollValue={scrollValue}/>}
-
       <LeftTree scrollValue={scrollValue}/>
       <RightTree scrollValue={scrollValue} />
     </>
