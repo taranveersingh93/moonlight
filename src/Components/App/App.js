@@ -6,14 +6,6 @@ import Scenery from '../Scenery/Scenery';
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
-  const [moonStyle, setMoonStyle] = useState({});
-  const [m1Style, setM1Style] = useState({});
-  const [m2Style, setM2Style] = useState({});
-  const [m3Style, setM3Style] = useState({});
-  const [m4Style, setM4Style] = useState({});
-  const [m5Style, setM5Style] = useState({});
-  const [leftTreeStyle, setLeftTreeStyle] = useState({});
-  const [rightTreeStyle, setRightTreeStyle] = useState({});
   
   window.addEventListener('wheel', (e) => {
     const changeY = e.deltaY;
@@ -30,16 +22,7 @@ function App() {
 
   return (
     <div className="App">
-        <Scenery
-          moonStyle={moonStyle} 
-          m1Style={m1Style}
-          m2Style={m2Style}
-          m3Style={m3Style}
-          m4Style={m4Style}
-          m5Style={m5Style}
-          leftTreeStyle={leftTreeStyle}
-          rightTreeStyle={rightTreeStyle}
-          />
+        <Scenery scrollValue={scrollValue}/>
     </div>
   );
 }

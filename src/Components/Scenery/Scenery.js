@@ -8,17 +8,18 @@ import M5 from '../Mountains/M5'
 import LeftTree from '../Trees/LeftTree'
 import RightTree from '../Trees/RightTree'
 
-const Scenery = ({moonStyle, m1Style, m2Style, m3Style, m4Style, m5Style, leftTreeStyle, rightTreeStyle}) => {
+const Scenery = ({scrollValue}) => {
+
   return (
     <>
-      <Moon />
-      <M1 />
-      <M2 />
-      <M3 />
-      <M4 />
-      <M5 />
-      <LeftTree />
-      <RightTree />
+      <Moon scrollValue={scrollValue}/>
+      <M1 scrollValue={scrollValue}/>
+      <M2 scrollValue={scrollValue}/>
+      <M3 scrollValue={scrollValue}/>
+      <M4 scrollValue={scrollValue}/>
+      <M5 scrollValue={scrollValue}/>
+      <LeftTree scrollValue={scrollValue}/>
+      <RightTree scrollValue={scrollValue} />
     </>
   )
 }
