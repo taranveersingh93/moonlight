@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #613e5e;
+}
+
+.moon-container {
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+  background: radial-gradient(closest-side, white, #613e5e 80%);
+}
+
+.moon {
+  height: 90%;
+  width: 90%;
+}
