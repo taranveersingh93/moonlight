@@ -9,17 +9,17 @@ const M4 = ({scrollValue}) => {
   const [adjustedScroll, setAdjustedScroll] = useState(0)
 
   useEffect(() => {
-    if (scrollValue > 4200) {
-      setAdjustedScroll(scrollValue - 4200)
+    if (scrollValue > 3200) {
+      setAdjustedScroll(scrollValue - 3200)
     } else {
       setAdjustedScroll(0)
     }
-    setM4Top(20 + (0.005 * adjustedScroll))
-    setSizeMultiplier(1 + (0.00015 * adjustedScroll))
+    setM4Top(20 + (0.017 * adjustedScroll))
+    setSizeMultiplier(1 + (0.0003 * adjustedScroll))
   }, [scrollValue])
 
   useEffect(() => {
-    console.log("top", m4Top, "size", sizeMultiplier, "scroll", scrollValue)
+    // console.log("top", m4Top, "size", sizeMultiplier, "scroll", scrollValue)
   }, [m4Top, sizeMultiplier, scrollValue])
   return (
     <img className='mountain4' src={mountain4} style={{top: `${m4Top}vh`, left: `${m4Left}vw`, transform: `scale(${sizeMultiplier})`}}/>

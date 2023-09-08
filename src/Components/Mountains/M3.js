@@ -11,13 +11,13 @@ const M3 = ({scrollValue}) => {
 
   useEffect(() => {
 
-    if (scrollValue > 1300) {
-      setAdjustedScroll(scrollValue - 1300)
+    if (scrollValue > 1800) {
+      setAdjustedScroll(scrollValue - 1800)
     } else {
       setAdjustedScroll(0)
     }
-    setM3Top(20 + (0.005 * adjustedScroll))
-    setSizeMultiplier(1 + (0.0002 * adjustedScroll))
+    setM3Top(20 + (0.01 * adjustedScroll))
+    setSizeMultiplier(1 + (0.0004* adjustedScroll))
   }, [scrollValue])
 
   useEffect(() => {
