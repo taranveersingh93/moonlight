@@ -4,10 +4,12 @@ import { useState } from 'react';
 
 
 const Moon = ({scrollValue}) => {
-  const [moonStyle, setMoonStyle] = useState({});
+  const [moonTop, setMoonTop] = useState(0);
+  const [moonLeft, setMoonleft] = useState(40)
+  const [sizeMultiplier, setSizeMultiplier] = useState(1);
 
   return (
-    <div className='moon-container'>
+    <div className='moon-container' style={{top: `${moonTop}vh`, left: `${moonLeft}vw`, transform: `scale(${sizeMultiplier})`}}>
       <img className="moon" src={moonImg} />
     </div>
   )

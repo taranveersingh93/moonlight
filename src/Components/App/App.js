@@ -17,7 +17,7 @@ function App() {
   })
   
   useEffect(() => {
-    styleByScroll(scrollValue)
+    // styleByScroll(scrollValue)
   }, [scrollValue])
 
   return (
