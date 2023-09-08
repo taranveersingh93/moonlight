@@ -19,8 +19,8 @@ function App() {
         <img className='mountain3' src={mountain3} />
         <img className='mountain4' src={mountain4} />
         <img className='mountain5' src={mountain5} />
-        {/* <img className='left-trees' src={leftTrees} />
-        <img className='right-trees' src={rightTrees} /> */}
+        <img className='left-trees' src={leftTrees} />
+        <img className='right-trees' src={rightTrees} />
     </div>
   );
 }
