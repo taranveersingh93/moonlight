@@ -2,6 +2,10 @@
   position: absolute;
 }
 
+p {
+  position: absolute;
+}
+
 .mountain1 {
   width: 110vw;
   z-index: 6;

@@ -1,0 +1,32 @@
+p {
+  margin: 0;
+  z-index: 50;
+  position: absolute;
+  color: white;
+  opacity: 0.6;
+}
+
+.win1-text {
+  left: 45vw;
+}
+
+.win2-text {
+  left: 10vw
+}
+
+.win3-text {
+  left: 20vw;
+}
+
+.win4-text {
+  left: 30vw;
+}
+
+.obstacle-text {
+  left: 60vw;
+}
+
+.assurance-text {
+  left: 15vw;
+  font-size: 1.2rem;
+}

@@ -11,15 +11,16 @@ function App() {
   
   window.addEventListener('wheel', (e) => {
     const changeY = e.deltaY;
-    if (scrollValue + changeY >= 0) {
+    if (scrollValue + changeY >= 0 && scrollValue + changeY < 9000 && formSubmitted) {
       setScrollValue(Number((scrollValue + changeY).toFixed(0)))
+    } else if (scrollValue + changeY > 9000) {
+      setScrollValue(8999)
     } else {
       setScrollValue(0)
     }
   })
   
   useEffect(() => {
-    console.log(data)
     if (data?.obstacle) {
       setFormSubmitted(true)
     } else {
@@ -30,7 +31,7 @@ function App() {
   return (
     <div className="App">
         {!formSubmitted && <Form setData={setData} />}
-        {formSubmitted && <Scenery scrollValue={scrollValue}/>}
+        <Scenery scrollValue={scrollValue} data={data}/>
     </div>
   );
 }
