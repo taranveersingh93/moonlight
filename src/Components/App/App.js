@@ -1,11 +1,13 @@
 import './App.css';
 
 import { useEffect, useState } from 'react';
-import styleByScroll from './scrollStyle';
 import Scenery from '../Scenery/Scenery';
+import Form from '../Form/Form';
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
+  const [data, setData] = useState({})
+  const [formSubmitted, setFormSubmitted] = useState(false)
   
   window.addEventListener('wheel', (e) => {
     const changeY = e.deltaY;
@@ -17,12 +19,18 @@ function App() {
   })
   
   useEffect(() => {
-    // styleByScroll(scrollValue)
-  }, [scrollValue])
+    console.log(data)
+    if (data?.obstacle) {
+      setFormSubmitted(true)
+    } else {
+      setFormSubmitted(false)
+    }
+  }, [data])
 
   return (
     <div className="App">
-        <Scenery scrollValue={scrollValue}/>
+        {!formSubmitted && <Form setData={setData} />}
+        {formSubmitted && <Scenery scrollValue={scrollValue}/>}
     </div>
   );
 }

@@ -16,7 +16,7 @@ const M3 = ({scrollValue}) => {
     } else {
       setAdjustedScroll(0)
     }
-    setM3Top(20 + (0.01 * adjustedScroll))
+    setM3Top(20 + (0.02 * adjustedScroll))
     setSizeMultiplier(1 + (0.0004* adjustedScroll))
   }, [scrollValue])
 
