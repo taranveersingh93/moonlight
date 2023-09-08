@@ -7,19 +7,9 @@ const M1 = ({scrollValue}) => {
   const [m1Top, setM1Top] = useState(55)
   const [sizeMultiplier, setSizeMultiplier] = useState(1);
   useEffect(() => {
-    // console.log(scrollValue)
-    if (scrollValue < 760) {
-      setM1Top(55 + (0.01 * scrollValue))
-      setSizeMultiplier(1 + (0.0002 * scrollValue))
-    } else {
-      setM1Top(55 + (0.02 * scrollValue))
-      setSizeMultiplier(1 + (0.0004 * scrollValue))
-    }
+      setM1Top(55 + (0.05 * scrollValue))
+      setSizeMultiplier(1 + (0.001 * scrollValue))
   }, [scrollValue])
-
-  useEffect(() => {
-    console.log("top", m1Top, "left",m1Left,"size", sizeMultiplier, "scroll", scrollValue)
-  }, [m1Top, m1Left, sizeMultiplier])
 
   return (
     <img className='mountain1' src={mountain1} style={{top: `${m1Top}vh`, left: `${m1Left}vw`, transform: `scale(${sizeMultiplier})` }}/>
