@@ -36,7 +36,7 @@ const Scenery = ({scrollValue, data, formSubmitted}) => {
       setWin1Visible(false)
     }
 
-    if (scrollValue > 1300 && scrollValue < 1800) {
+    if (scrollValue > 1300 && scrollValue < 2300) {
       setWin2Visible(true)
     } else {
       setWin2Visible(false)
