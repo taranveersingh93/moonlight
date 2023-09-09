@@ -8,8 +8,8 @@ const M2 = ({scrollValue}) => {
   const [m2Top, setM2Top] = useState(25)
   const [sizeMultiplier, setSizeMultiplier] = useState(1);
   useEffect(() => {
-    if (scrollValue > 500) {
-      setAdjustedScroll(scrollValue - 500)
+    if (scrollValue > 1300) {
+      setAdjustedScroll(scrollValue - 1300)
     } else {
       setAdjustedScroll(0)
     }

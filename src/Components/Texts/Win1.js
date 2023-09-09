@@ -4,7 +4,7 @@ import './texts.css'
 const Win1 = ({data, scrollValue}) => {
   
   return (
-    <p className='win1-text' style={{top: `${75 + 0.01*scrollValue}vh`}}>
+    <p className='win1-text' style={{top: `${50+ 0.05*scrollValue}vh`}}>
       {data?.win1}
     </p>
   )

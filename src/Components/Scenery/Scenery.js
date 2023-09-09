@@ -30,25 +30,25 @@ const Scenery = ({scrollValue, data, formSubmitted}) => {
   const [assurance3Visible, setAssurance3Visible] = useState(false)
 
   useEffect(() => {
-    if (scrollValue > 150 && scrollValue < 420) {
+    if (scrollValue > 490 && scrollValue < 720) {
       setWin1Visible(true)
     } else {
       setWin1Visible(false)
     }
 
-    if (scrollValue > 530 && scrollValue < 1300) {
+    if (scrollValue > 1300 && scrollValue < 1800) {
       setWin2Visible(true)
     } else {
       setWin2Visible(false)
     }
 
-    if (scrollValue > 1570 && scrollValue < 2800) {
+    if (scrollValue > 2500 && scrollValue < 3800) {
       setWin3Visible(true)
     } else {
       setWin3Visible(false)
     }
 
-    if (scrollValue > 3200 && scrollValue < 5200) {
+    if (scrollValue > 4350 && scrollValue < 6000) {
       setWin4Visible(true)
     } else {
       setWin4Visible(false)
@@ -77,8 +77,7 @@ const Scenery = ({scrollValue, data, formSubmitted}) => {
     } else {
       setAssurance3Visible(false)
     }
-
-
+    console.log(scrollValue)
   }, [scrollValue])
   return (
     <>

@@ -11,8 +11,8 @@ const M3 = ({scrollValue}) => {
 
   useEffect(() => {
 
-    if (scrollValue > 1800) {
-      setAdjustedScroll(scrollValue - 1800)
+    if (scrollValue > 2500) {
+      setAdjustedScroll(scrollValue - 2500)
     } else {
       setAdjustedScroll(0)
     }

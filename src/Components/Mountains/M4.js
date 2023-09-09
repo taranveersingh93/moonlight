@@ -9,8 +9,8 @@ const M4 = ({scrollValue}) => {
   const [adjustedScroll, setAdjustedScroll] = useState(0)
 
   useEffect(() => {
-    if (scrollValue > 3200) {
-      setAdjustedScroll(scrollValue - 3200)
+    if (scrollValue > 4350) {
+      setAdjustedScroll(scrollValue - 4350)
     } else {
       setAdjustedScroll(0)
     }
