@@ -19,7 +19,7 @@ p {
 }
 
 .win4-text {
-  left: 30vw;
+  left: 25vw;
 }
 
 .obstacle-text {
@@ -28,5 +28,5 @@ p {
 
 .assurance-text {
   color: white;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
