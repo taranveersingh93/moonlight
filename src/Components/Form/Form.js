@@ -32,11 +32,11 @@ const Form = ({setData}) => {
   return (
     <form onSubmit={(e) => {handleSubmit(e)}}>
       <label className='obstacle'>
-        What's a life obstacle infront of you?
+        List a challenge that you're facing:
         <input type='text' name='obstacle'value={formEntries.obstacle} onChange={(e) => {handleChange(e, "obstacle")}}/>
       </label>
       <label className='wins'>
-        List 4 life obstacles that you got through:
+        List 4 small wins that you had:
         <input type='text' name='win1' value={formEntries.win1} onChange={(e) => {handleChange(e, "win1")}}/>
         <input type='text' name='win2' value={formEntries.win2} onChange={(e) => {handleChange(e, "win2")}}/>
         <input type='text' name='win3' value={formEntries.win3} onChange={(e) => {handleChange(e, "win3")}}/>
