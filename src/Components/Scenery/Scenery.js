@@ -77,7 +77,6 @@ const Scenery = ({scrollValue, data, formSubmitted}) => {
     } else {
       setAssurance3Visible(false)
     }
-    console.log(scrollValue)
   }, [scrollValue])
   return (
     <>

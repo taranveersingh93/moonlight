@@ -2,7 +2,9 @@ import './ScrollIndicator.css'
 
 const ScrollIndicator = () => {
   return (
-    <p className='scroll-indicator'>Scroll Down...</p>
+    <div className='scrolldown'>
+      <div className='arrow'></div>
+    </div>
   )
 }
 
