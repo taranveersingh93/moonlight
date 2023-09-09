@@ -1,5 +1,6 @@
 form {
   font-size: 2rem;
+  font-weight: 200;
   position: absolute;
   left: 50%;
   top: 200px;
@@ -10,6 +11,10 @@ form {
   color: white;
   align-items: center;
   z-index: 100;
+  padding: 50px;
+  border-radius: 15px;
+  border: 1px solid white;
+  backdrop-filter: blur(50px);
 }
 
 input {

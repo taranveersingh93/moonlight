@@ -13,7 +13,6 @@ const M5 = ({scrollValue}) => {
     } else {
       setAdjustedScroll(0)
     }
-    // setM5Right (0.0001 * scrollValue)
     setSizeMultiplier(1 + (0.0000015 * scrollValue))
   }, [scrollValue])
 

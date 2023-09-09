@@ -36,7 +36,7 @@ const Form = ({setData}) => {
         <input type='text' name='obstacle'value={formEntries.obstacle} onChange={(e) => {handleChange(e, "obstacle")}}/>
       </label>
       <label className='wins'>
-        List 4 life obstacles that are past you now:
+        List 4 life obstacles that you got through:
         <input type='text' name='win1' value={formEntries.win1} onChange={(e) => {handleChange(e, "win1")}}/>
         <input type='text' name='win2' value={formEntries.win2} onChange={(e) => {handleChange(e, "win2")}}/>
         <input type='text' name='win3' value={formEntries.win3} onChange={(e) => {handleChange(e, "win3")}}/>
